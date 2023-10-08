@@ -27,6 +27,13 @@ class Pool {
   bool? aberta;
   /* mostra se é possivel se candidatar pra pool
    como motorista ou passsageiro*/
+  DateTime? inicioCorrida;
+  /*
+    Baseado primeiramente nos dias disponiveis do motorista
+    a corrida é criada, mas pra isso a pool precisa estar fechada,
+    sera convocado os alunos que vão no mesmo dia
+    com isso definira a rota para o motorista
+   */
 
   Pool(this.donoPool, this.nomePool);
 }
