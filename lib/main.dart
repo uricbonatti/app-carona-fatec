@@ -5,9 +5,14 @@ void main() {
 }
 
 /// Flutter code sample for [Form].
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,12 +42,17 @@ class _FormExampleState extends State<FormExample> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           TextFormField(
+            
+            
+
+          ),
+          TextFormField(
             decoration: const InputDecoration(
               hintText: 'Command',
             ),
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter some text';
+                return 'Caronas Fatec Mogi Mirim CLI';
               }
               return null;
             },
